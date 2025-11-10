@@ -1,0 +1,72 @@
+/* Cozy café theme */
+:root{
+  --bg: #F8F4F0;
+  --card: #FFF7F2;
+  --accent: #8B5E3C;
+  --muted: #6B4A33;
+  --green: #3B7A57;
+}
+
+body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(180deg, var(--bg), #EFE8E3);
+  color: var(--muted);
+  margin: 0;
+  padding: 24px;
+}
+
+h1{
+  color: var(--accent);
+  margin-bottom: 16px;
+}
+
+.nav{
+  margin-bottom: 18px;
+}
+
+.nav a{
+  margin-right: 12px;
+  text-decoration: none;
+  color: var(--muted);
+  background: var(--card);
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.chart-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 18px;
+}
+
+.card{
+  background: var(--card);
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+}
+
+canvas{
+  width: 100% !important;
+  height: 220px !important;
+}
+
+form{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+input, button{
+  padding:8px;
+  border-radius:8px;
+  border:1px solid #e6d9d3;
+}
+
+button{
+  background: var(--accent);
+  color: white;
+  border: none;
+  cursor: pointer;
+}

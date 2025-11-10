@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sales - Add Entry</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h2>Sales - Add Entry</h2>
+  <a href="/">← Back to Dashboard</a>
+  <div class="card" style="margin-top:12px;">
+    <form id="form">
+      <input type="number" step="any" id="amount" placeholder="Amount" required />
+      <input type="date" id="date" required />
+      <button type="submit">Add</button>
+    </form>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script>
+    document.getElementById('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const amount = parseFloat(document.getElementById('amount').value);
+      const date = document.getElementById('date').value;
+      try {
+        await postMetric('sales', amount, date);
+        alert('Added to sales');
+        e.target.reset();
+      } catch (err) {
+        alert('Error: ' + err.message);
+      }
+    });
+  </script>
+</body>
+</html>

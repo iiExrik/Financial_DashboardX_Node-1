@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Cozy Finance Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <h1>☕ Cozy Finance DashboardX</h1>
+
+  <div class="nav">
+    <a href="sales.html">Sales</a>
+    <a href="expenses.html">Expenses</a>
+    <a href="profit_margin.html">Profit Margin</a>
+    <a href="profit_loss.html">Profit/Loss</a>
+    <a href="purchases.html">Purchases</a>
+  </div>
+
+  <div class="chart-grid">
+    <div class="card"><h3>Sales</h3><canvas id="salesChart"></canvas></div>
+    <div class="card"><h3>Expenses</h3><canvas id="expensesChart"></canvas></div>
+    <div class="card"><h3>Profit / Loss</h3><canvas id="profitChart"></canvas></div>
+    <div class="card"><h3>Profit Margin (%)</h3><canvas id="marginChart"></canvas></div>
+    <div class="card"><h3>Purchases</h3><canvas id="purchasesChart"></canvas></div>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/charts.js"></script>
+</body>
+</html>
